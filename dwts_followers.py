@@ -13,7 +13,7 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-dwts_couples = [
+DWTS_COUPLES = [
     ['candacecbure', 'MarkBallas'],
     ['Meryl_Davis', 'MaksimC'],
     ['CharlieaWhite', 'SharnaBurgess'],
@@ -25,7 +25,7 @@ def follower_count(screen_name):
     user = api.get_user(screen_name)
     return user.followers_count
 
-for couple in dwts_couples:
+for couple in DWTS_COUPLES:
     couple_followers = 0
     for person in couple:
         followers = follower_count(person)
